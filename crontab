@@ -1,1 +1,1 @@
-*/5 * * * * (cd /home/pi/source && /home/pi/source/mqtt_dh11.sh)
+* * * * * (cd /home/pi/source/temp_sensor && /home/pi/source/temp_sensor/mqtt_dh11.sh)
