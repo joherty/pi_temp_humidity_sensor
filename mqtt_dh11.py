@@ -1,15 +1,20 @@
 #!/bin/env/ python3
 
+#Simple script to publish temperature and humidity reading from a DHT11, DHT22 or DHT2302 sensor
+#to an MQTT broker using a Raspberry Pi
+#joherty
+
 import sys
 import paho.mqtt.client as mqtt
 import Adafruit_DHT
 import time
 
+#set MQTT broker address and topics
 broker_address="10.0.0.9"
 topic_temperature="house/pi_two/temperature"
 topic_humidity="house/pi_two/humidity"
 
-# Parse command line parameters.
+#parse command line parameters for Adafruit_DHT
 sensor_args = { '11': Adafruit_DHT.DHT11,
                 '22': Adafruit_DHT.DHT22,
                 '2302': Adafruit_DHT.AM2302 }
@@ -24,14 +29,7 @@ else:
 #attempt a sensor reading, 15 attempts (waiting 2 seconds between each retry).
 humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
 
-#def on_message(client, userdata, message):
-#    print("message received " ,str(message.payload.decode("utf-8")))
-#    print("message topic=",message.topic)
-#    print("message qos=",message.qos)
-#    print("message retain flag=",message.retain)
-
-#def on_log(client, userdata, level, buf):
-#    print("log: ",buf)
+#If a reading is obtained, print it, then send readings to MQTT
 
 if humidity is not None and temperature is not None:
     print('Temp={0:0.1f}*  Humidity={1:0.1f}%'.format(temperature, humidity))
