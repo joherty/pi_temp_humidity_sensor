@@ -6,12 +6,8 @@ import Adafruit_DHT
 import time
 
 broker_address="10.0.0.9"
-
-def on_message(client, userdata, message):
-    print("message received " ,str(message.payload.decode("utf-8")))
-    print("message topic=",message.topic)
-    print("message qos=",message.qos)
-    print("message retain flag=",message.retain)
+topic_temperature="house/pizero/temperature"
+topic_humidity="house/pizero/humidity"
 
 # Parse command line parameters.
 sensor_args = { '11': Adafruit_DHT.DHT11,
@@ -25,28 +21,35 @@ else:
     print('Example: sudo ./Adafruit_DHT.py 2302 4 - Read from an AM2302 connected to GPIO pin #4')
     sys.exit(1)
 
-# Try to grab a sensor reading.  Use the read_retry method which will retry up
-# to 15 times to get a sensor reading (waiting 2 seconds between each retry).
+#attempt a sensor reading, 15 attempts (waiting 2 seconds between each retry).
 humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
 
-def on_log(client, userdata, level, buf):
-    print("log: ",buf)
+#def on_message(client, userdata, message):
+#    print("message received " ,str(message.payload.decode("utf-8")))
+#    print("message topic=",message.topic)
+#    print("message qos=",message.qos)
+#    print("message retain flag=",message.retain)
+
+#def on_log(client, userdata, level, buf):
+#    print("log: ",buf)
 
 if humidity is not None and temperature is not None:
     print('Temp={0:0.1f}*  Humidity={1:0.1f}%'.format(temperature, humidity))
-    print("creating new instance")
-    client = mqtt.Client("P1") #create new instance
-    print("connecting to broker")
+#create new instance
+    client = mqtt.Client("P1")
+#pass username and password if required, otherwise comment out
     client.username_pw_set(username="mqtt",password="publishme$")
-    client.connect(broker_address) #connect to broker
-    client.loop_start() #start the loop
-    print("Subscribing to topic","house/pizero/temperature")
-    client.subscribe("house/pizero/temperature")
-    print("Publishing message to topic","house/pizero/temperature")
-    client.publish("house/pizero/temperature",temperature)
-    print("Subscribing to topic","house/pizero/humidity")
+#connect to broker
+    client.connect(broker_address)
+#start the loop
+    client.loop_start()
+#subscribe to the defined topic 
+    client.subscribe("topic_temperature")
+#publish to the defined topic
+    client.publish("topic_temperature",temperature)
+#subscribe to the defined topic 
     client.subscribe("house/pizero/humidity")
-    print("Publishing message to topic","house/pizero/humidity")
+#publish to the defined topic
     client.publish("house/pizero/humidity",humidity)
     time.sleep(4) # wait
     client.loop_stop() #stop the loop
