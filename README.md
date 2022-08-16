@@ -1,6 +1,3 @@
-# temp_sensor
-# pip install Adafruit-DHT
-# pip install paho-mqtt
 # Project Title
 
 Simple overview of use/purpose.
@@ -26,14 +23,14 @@ An in-depth paragraph about your project and overview of use.
 * How to run the program
 * Step-by-step bullets
 ```
-code blocks for commands
+pip install Adafruit-DHT
 ```
 
 ## Help
 
 Any advise for common problems or issues.
 ```
-command to run if program contains helper info
+pip install paho-mqtt
 ```
 
 ## Authors
