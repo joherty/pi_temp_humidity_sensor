@@ -6,8 +6,8 @@ import Adafruit_DHT
 import time
 
 broker_address="10.0.0.9"
-topic_temperature="house/pizero/temperature"
-topic_humidity="house/pizero/humidity"
+topic_temperature="house/pi_two/temperature"
+topic_humidity="house/pi_two/humidity"
 
 # Parse command line parameters.
 sensor_args = { '11': Adafruit_DHT.DHT11,
@@ -44,13 +44,13 @@ if humidity is not None and temperature is not None:
 #start the loop
     client.loop_start()
 #subscribe to the defined topic 
-    client.subscribe("topic_temperature")
+    client.subscribe(topic_temperature)
 #publish to the defined topic
-    client.publish("topic_temperature",temperature)
+    client.publish(topic_temperature,temperature)
 #subscribe to the defined topic 
-    client.subscribe("house/pizero/humidity")
+    client.subscribe(topic_humidity)
 #publish to the defined topic
-    client.publish("house/pizero/humidity",humidity)
+    client.publish(topic_humidity,humidity)
     time.sleep(4) # wait
     client.loop_stop() #stop the loop
 else:
