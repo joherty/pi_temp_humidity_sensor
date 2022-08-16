@@ -4,6 +4,8 @@
 #to an MQTT broker using a Raspberry Pi
 #joherty
 
+#Using Adafruit_DHT and Paho MQTT
+
 import sys
 import paho.mqtt.client as mqtt
 import Adafruit_DHT
