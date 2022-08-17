@@ -15,7 +15,7 @@ Use any Pi. Im using DHT11 sensors at the moment but may
 
 ### Installing
 
-* Clone or copy the project to your pi. I use home/pi/source as my script directory
+Clone or copy the project to your pi. I use home/pi/source as my script directory
 * Create a source folder and move into it, then clone the project.
 ```
 sudo mkdir /home/pi/source && cd /home/pi/source
