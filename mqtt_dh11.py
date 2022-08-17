@@ -38,7 +38,7 @@ if humidity is not None and temperature is not None:
 #create new instance
     client = mqtt.Client("P1")
 #pass username and password if required, otherwise comment out
-    client.username_pw_set(username="mqtt",password="publishme$")
+#    client.username_pw_set(username="user",password="password")
 #connect to broker
     client.connect(broker_address)
 #start the loop
