@@ -22,7 +22,18 @@ sudo mkdir /home/pi/source && cd /home/pi/source
 ```
 sudo git clone https://github.com/joherty/temp_sensor.git
 ```
-* Any modifications needed to be made to files/folders
+* Make the files executable
+```
+sudo chmod +x mqtt_dht.sh mqyy_dht.py
+```
+* Open crontab in edit mode
+```
+sudo crontab -e
+```
+* Add the following line to run mqtt_dht.sh every min
+```
+* * * * * (cd /home/pi/source/temp_sensor && /home/pi/source/temp_sensor/mqtt_dht.sh)
+```
 
 ### Executing program
 
