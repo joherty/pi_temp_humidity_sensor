@@ -1,1 +1,1 @@
-* * * * * (cd /home/pi/source/temp_sensor && /home/pi/source/temp_sensor/mqtt_dh11.sh)
+* * * * * (cd /home/pi/source/pi_temp_humidity_sensor && /home/pi/source/pi_temp_humidity_sensor/mqtt_dh11.sh)
