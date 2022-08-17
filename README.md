@@ -20,7 +20,7 @@ Clone or copy the project to your pi. I use home/pi/source as my script director
 sudo mkdir /home/pi/source && cd /home/pi/source
 ```
 ```
-sudo git clone https://github.com/joherty/temp_sensor.git
+sudo git clone https://github.com/joherty/pi_temp_humidity_sensor.git
 ```
 * Make the files executable
 ```
@@ -32,7 +32,7 @@ sudo crontab -e
 ```
 * Add the following line to run mqtt_dht.sh every min
 ```
-* * * * * (cd /home/pi/source/temp_sensor && /home/pi/source/temp_sensor/mqtt_dht.sh)
+* * * * * (cd /home/pi/source/temp_sensor && /home/pi/source/pi_temp_humidity_sensor/mqtt_dht.sh)
 ```
 
 ### Executing program
