@@ -1,6 +1,10 @@
 # pi_temp_humidity_sensor
 Using any Raspberry PI and a DHT11, DHT22 or DHT2302 sensor, read and publish data to an MQTT broker.
 
+The DHT11 is a low-cost and popular sensor for measuring temperature and humidity. The device on the module requires 3 connections to the Raspberry Pi : 3,3V ; GND and a GPIO input pin.
+Use PIN 4 on the Pi for the GPIO input pin.
+
+
 ## Description
 
 Use any Pi. Ive tested on v1B, v2 and Pi Zero W 
