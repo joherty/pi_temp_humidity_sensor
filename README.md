@@ -15,7 +15,14 @@ Use any Pi. Im using DHT11 sensors at the moment but may
 
 ### Installing
 
-* How/where to download your program
+* Clone or copy the project to your pi. I use home/pi/source as my script directory
+* Create a source folder and move into it, then clone the project.
+```
+sudo mkdir /home/pi/source && cd /home/pi/source
+```
+```
+sudo git clone https://github.com/joherty/temp_sensor.git
+```
 * Any modifications needed to be made to files/folders
 
 ### Executing program
