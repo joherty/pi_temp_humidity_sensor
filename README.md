@@ -1,6 +1,6 @@
-# Project Title
+# temp_sensor
 
-Simple overview of use/purpose.
+Python script, read and publish DHT11, DHT22 or DHT2302 sensor data to an MQTT broker.
 
 ## Description
 
