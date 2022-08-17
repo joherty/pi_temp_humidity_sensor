@@ -39,7 +39,7 @@ sudo git clone https://github.com/joherty/pi_temp_humidity_sensor.git
 sudo chmod +x mqtt_dht.sh
 ```
 * If you are using authentication on your MQTT server, uncomment and add username and password to client.username_pw_set
-* in mqtt_dht.sh
+in mqtt_dht.sh
 
 Open crontab in edit mode
 ```
