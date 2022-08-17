@@ -3,7 +3,7 @@ Using any Raspberry PI and a DHT11, DHT22 or DHT2302 sensor, read and publish da
 
 ## Description
 
-Use any Pi. Im using DHT11 sensors at the moment but may 
+Use any Pi. Ive tested on v1B, v2 and Pi Zero W 
 
 ## Getting Started
 
