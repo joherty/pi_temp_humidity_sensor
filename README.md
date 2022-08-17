@@ -32,13 +32,16 @@ sudo mkdir /home/pi/source && cd /home/pi/source
 ```
 sudo git clone https://github.com/joherty/pi_temp_humidity_sensor.git
 ```
-* Make the shell script executable (this file will launch mqtt_dht.sh with the command line arguments 11 and 4
-* (11 is to specify the sensor type, in my case a DHT11)
-* (4 is the GPIO pn used for data)
+* Make the shell script executable (this file will launch mqtt_dht.sh with the command line arguments 11 and 4)
+(11 is to specify the sensor type, in my case a DHT11)
+(4 is the GPIO pin used for data)
 ```
 sudo chmod +x mqtt_dht.sh
 ```
-* Open crontab in edit mode
+* If you are using authentication on your MQTT server, uncomment and add username and password to client.username_pw_set
+* in mqtt_dht.sh
+
+Open crontab in edit mode
 ```
 sudo crontab -e
 ```
@@ -49,43 +52,11 @@ sudo crontab -e
 
 ### Executing program
 
-* How to run the program
-* Step-by-step bullets
-```
-pip install Adafruit-DHT
-```
 
-## Help
-
-Any advise for common problems or issues.
-```
-pip install paho-mqtt
-```
 
 ## Authors
 
 Contributors names and contact info
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+joherty
 
-## Version History
-
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
-
-## License
-
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
-
-## Acknowledgments
-
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
