@@ -11,12 +11,18 @@ Use any Pi. Ive tested on v1B, v2 and Pi Zero W
 
 ## Getting Started
 
-### Dependencies
+### Install Dependencies First
 
 * Adafruit-DHT
+```
+pip install Adafruit-DHT
+```
 * Paho MQTT
+```
+pip install paho-mqtt
+```
 
-### Installing
+### Adding the script
 
 Clone or copy the project to your pi. I use home/pi/source as my script directory
 * Create a source folder and move into it, then clone the project.
@@ -26,9 +32,11 @@ sudo mkdir /home/pi/source && cd /home/pi/source
 ```
 sudo git clone https://github.com/joherty/pi_temp_humidity_sensor.git
 ```
-* Make the files executable
+* Make the shell script executable (this file will launch mqtt_dht.sh with the command line arguments 11 and 4
+* (11 is to specify the sensor type, in my case a DHT11)
+* (4 is the GPIO pn used for data)
 ```
-sudo chmod +x mqtt_dht.sh mqyy_dht.py
+sudo chmod +x mqtt_dht.sh
 ```
 * Open crontab in edit mode
 ```
