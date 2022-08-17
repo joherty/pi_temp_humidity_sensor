@@ -4,7 +4,7 @@ Python script, using any Raspberry PI read and publish DHT11, DHT22 or DHT2302 s
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+Use any Pi. Im using DHT11 sensors at the moment but may 
 
 ## Getting Started
 
