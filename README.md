@@ -32,7 +32,7 @@ sudo mkdir /home/pi/source && cd /home/pi/source
 ```
 sudo git clone https://github.com/joherty/pi_temp_humidity_sensor.git
 ```
-* Make the shell script executable (this file will launch mqtt_dht.sh with the command line arguments 11 and 4)
+* Make the shell script executable (this script will launch mqtt_dht.py with the command line arguments 11 and 4)
 (11 is to specify the sensor type, in my case a DHT11)
 (4 is the GPIO pin used for data)
 ```
