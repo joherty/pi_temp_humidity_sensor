@@ -1,6 +1,6 @@
 # temp_sensor
 
-Python script, using any Raspberry PI read and publish DHT11, DHT22 or DHT2302 sensor data to an MQTT broker.
+Python script. Using any Raspberry PI and a DHT11, DHT22 or DHT2302 sensor, read and publish data to an MQTT broker.
 
 ## Description
 
