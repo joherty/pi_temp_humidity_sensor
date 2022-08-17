@@ -52,7 +52,7 @@ sudo crontab -e
 ```
 
 ### Executing program
-The script will run once every min via cron. Temperature and humudity values will be published to your MQTT broker using
+The script will run once every min via cron. Temperature and humidity values will be published to your MQTT broker using
 the topics defined under topic_temperature and topic_humidity.
 
 
