@@ -1,4 +1,4 @@
-# temp_sensor
+# pi_temp_humidity_sensor
 Using any Raspberry PI and a DHT11, DHT22 or DHT2302 sensor, read and publish data to an MQTT broker.
 
 ## Description
