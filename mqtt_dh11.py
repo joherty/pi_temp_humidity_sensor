@@ -12,7 +12,7 @@ import Adafruit_DHT
 import time
 
 #set MQTT broker address and topics
-broker_address="10.0.0.9"
+broker_address="Add broker IP Address"
 topic_temperature="house/pi_two/temperature"
 topic_humidity="house/pi_two/humidity"
 
