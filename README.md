@@ -38,6 +38,7 @@ sudo git clone https://github.com/joherty/pi_temp_humidity_sensor.git
 ```
 sudo chmod +x mqtt_dht.sh
 ```
+* Edit mqtt_dht.py and add your MQTT broker address by editing the broker_address variable.
 * If you are using authentication on your MQTT server, uncomment and add username and password to client.username_pw_set
 in mqtt_dht.sh
 
@@ -51,7 +52,8 @@ sudo crontab -e
 ```
 
 ### Executing program
-
+The script will run once every min via cron. Temperature and humudity values will be published to your MQTT broker using
+the topics defined under topic_temperature and topic_humidity.
 
 
 ## Authors
