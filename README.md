@@ -10,8 +10,8 @@ Use any Pi. Im using DHT11 sensors at the moment but may
 
 ### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+* Adafruit-DHT
+* Paho MQTT
 
 ### Installing
 
